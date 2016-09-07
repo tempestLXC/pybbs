@@ -5,8 +5,8 @@
 <div class="slide wrap">
   <div id="demo01" class="flexslider">
 	<ul class="slides" id="myButton">
-		<li><div class="img"><img src="/static/image/banner/01.jpg" /></div></li>
-		<li><div class="img"><img src="/static/image/banner/02.jpg" /></div></li>
+		<li><a href="#"><div class="img"><img src="/static/image/banner/01.jpg" /></div></a></li>
+		<li><a href="#"><div class="img"><img src="/static/image/banner/02.jpg" /></div></a></li>
 	</ul>
   </div>
 </div>
@@ -47,194 +47,12 @@ $(function(){
 		<em><a href="upload_file.html">发表作品</a></em>
 	 </div>
 	 <!--标题 -->
-	 
-	 <!--列表 -->
-	 <div class="index_list">
-	    <ul>
-		   <!--每个但愿模块start-->
-		   <li>
-				<a href="personal_production.html">
-			      <span class="index_pic"><img src="/static/image/add/06.jpg" /></span>
-			      </a>
-				  <span class="index_title">
-				    <a href="#">仓惶之狗/最近一有时间就画些...</a>
-				  </span>
-				  <div class="index_type">
-				  	<div class="production_mark">好文转载</div>
-				  	<span class="production_type">插画</span>
-				  </div>
-				  <span class="index_data">
-				    <i>2390</i> 人气 / <i>4</i> 评论 / <i>10</i>推荐
-				  </span>
-				  <span class="index_user">
-				    <em class="tx"><img src="/static/image/add/01.jpg" /> <i>满意的分子</i></em>
-					<em class="time">15分钟前上传</em>
-				  </span>
-				
-		   </li>
-		   <!--每个但愿模块end-->
-		   <!--每个但愿模块start-->
-		   <li>
-				<a href="personal_production.html">
-			      <span class="index_pic"><img src="/static/image/add/06.jpg" /></span>
-			      </a>
-				  <span class="index_title">
-				    <a href="#">仓惶之狗/最近一有时间就画些...</a>
-				  </span>
-				  <div class="index_type">
-				  	<div class="production_mark">好文转载</div>
-				  	<span class="production_type">插画</span>
-				  </div>
-				  <span class="index_data">
-				    <i>2390</i> 人气 / <i>4</i> 评论 / <i>10</i>推荐
-				  </span>
-				  <span class="index_user">
-				    <em class="tx"><img src="/static/image/add/01.jpg" /> <i>满意的分子</i></em>
-					<em class="time">15分钟前上传</em>
-				  </span>
-				
-		   </li>
-		   <!--每个但愿模块end-->
-		   <!--每个但愿模块start-->
-		   <li>
-				<a href="personal_production.html">
-			      <span class="index_pic"><img src="/static/image/add/06.jpg" /></span>
-			      </a>
-				  <span class="index_title">
-				    <a href="#">仓惶之狗/最近一有时间就画些...</a>
-				  </span>
-				  <div class="index_type">
-				  	<div class="production_mark">好文转载</div>
-				  	<span class="production_type">插画</span>
-				  </div>
-				  <span class="index_data">
-				    <i>2390</i> 人气 / <i>4</i> 评论 / <i>10</i>推荐
-				  </span>
-				  <span class="index_user">
-				    <em class="tx"><img src="/static/image/add/01.jpg" /> <i>满意的分子</i></em>
-					<em class="time">15分钟前上传</em>
-				  </span>
-				
-		   </li>
-		   <!--每个但愿模块end-->
-		   <!--每个但愿模块start-->
-		   <li>
-				<a href="personal_production.html">
-			      <span class="index_pic"><img src="/static/image/add/06.jpg" /></span>
-			      </a>
-				  <span class="index_title">
-				    <a href="#">仓惶之狗/最近一有时间就画些...</a>
-				  </span>
-				  <div class="index_type">
-				  	<div class="production_mark">好文转载</div>
-				  	<span class="production_type">插画</span>
-				  </div>
-				  <span class="index_data">
-				    <i>2390</i> 人气 / <i>4</i> 评论 / <i>10</i>推荐
-				  </span>
-				  <span class="index_user">
-				    <em class="tx"><img src="/static/image/add/01.jpg" /> <i>满意的分子</i></em>
-					<em class="time">15分钟前上传</em>
-				  </span>
-				
-		   </li>
-		   <!--每个但愿模块end-->
-		   <!--每个但愿模块start-->
-		   <li>
-				<a href="personal_production.html">
-			      <span class="index_pic"><img src="/static/image/add/06.jpg" /></span>
-			      </a>
-				  <span class="index_title">
-				    <a href="#">仓惶之狗/最近一有时间就画些...</a>
-				  </span>
-				  <div class="index_type">
-				  	<div class="production_mark">好文转载</div>
-				  	<span class="production_type">插画</span>
-				  </div>
-				  <span class="index_data">
-				    <i>2390</i> 人气 / <i>4</i> 评论 / <i>10</i>推荐
-				  </span>
-				  <span class="index_user">
-				    <em class="tx"><img src="/static/image/add/01.jpg" /> <i>满意的分子</i></em>
-					<em class="time">15分钟前上传</em>
-				  </span>
-				
-		   </li>
-		   <!--每个但愿模块end-->
-		   <!--每个但愿模块start-->
-		   <li>
-				<a href="personal_production.html">
-			      <span class="index_pic"><img src="/static/image/add/06.jpg" /></span>
-			      </a>
-				  <span class="index_title">
-				    <a href="#">仓惶之狗/最近一有时间就画些...</a>
-				  </span>
-				  <div class="index_type">
-				  	<div class="production_mark">好文转载</div>
-				  	<span class="production_type">插画</span>
-				  </div>
-				  <span class="index_data">
-				    <i>2390</i> 人气 / <i>4</i> 评论 / <i>10</i>推荐
-				  </span>
-				  <span class="index_user">
-				    <em class="tx"><img src="/static/image/add/01.jpg" /> <i>满意的分子</i></em>
-					<em class="time">15分钟前上传</em>
-				  </span>
-				
-		   </li>
-		   <!--每个但愿模块end-->
-		   <!--每个但愿模块start-->
-		   <li>
-				<a href="personal_production.html">
-			      <span class="index_pic"><img src="/static/image/add/06.jpg" /></span>
-			      </a>
-				  <span class="index_title">
-				    <a href="#">仓惶之狗/最近一有时间就画些...</a>
-				  </span>
-				  <div class="index_type">
-				  	<div class="production_mark">好文转载</div>
-				  	<span class="production_type">插画</span>
-				  </div>
-				  <span class="index_data">
-				    <i>2390</i> 人气 / <i>4</i> 评论 / <i>10</i>推荐
-				  </span>
-				  <span class="index_user">
-				    <em class="tx"><img src="/static/image/add/01.jpg" /> <i>满意的分子</i></em>
-					<em class="time">15分钟前上传</em>
-				  </span>
-				
-		   </li>
-		   <!--每个但愿模块end-->
-		   <!--每个但愿模块start-->
-		   <li>
-				<a href="personal_production.html">
-			      <span class="index_pic"><img src="/static/image/add/06.jpg" /></span>
-			      </a>
-				  <span class="index_title">
-				    <a href="#">仓惶之狗/最近一有时间就画些...</a>
-				  </span>
-				  <div class="index_type">
-				  	<div class="production_mark">好文转载</div>
-				  	<span class="production_type">插画</span>
-				  </div>
-				  <span class="index_data">
-				    <i>2390</i> 人气 / <i>4</i> 评论 / <i>10</i>推荐
-				  </span>
-				  <span class="index_user">
-				    <em class="tx"><img src="/static/image/add/01.jpg" /> <i>满意的分子</i></em>
-					<em class="time">15分钟前上传</em>
-				  </span>
-				
-		   </li>
-		   <!--每个但愿模块end-->
-		   
-		   
-		   
-		   
-		</ul>
-	 </div>
-	 <!--列表 -->
-	 
+
+      <!--列表 -->
+	  <#include "./components/topics.ftl"/>
+	  <@topics/>
+      <!--列表 -->
+
   </div>
 </div>
 <!--首页推荐 -->

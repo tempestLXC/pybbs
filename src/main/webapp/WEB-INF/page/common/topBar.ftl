@@ -8,11 +8,11 @@
         <!--导航 -->
         <div class="nav">
             <ul>
-                <li class="now"><a href="#">首页</a></li>
-                <li><a href="index_article.html">文章</a></li>
-                <li><a href="index_production.html">作品</a></li>
-                <li><a href="#">设计师</a></li>
-                <li><a href="#">素材</a></li>
+                <li <#if bar?? && bar == "index" >class="now"</#if>><a href="#">首页</a></li>
+                <li <#if bar?? && bar == "article" >class="now"</#if>><a href="index_article.html">文章</a></li>
+                <li <#if bar?? && bar == "product" >class="now"</#if>><a href="index_production.html">作品</a></li>
+                <li <#if bar?? && bar == "stylist" >class="now"</#if>><a href="#">设计师</a></li>
+                <li <#if bar?? && bar == "material" >class="now"</#if>><a href="#">素材</a></li>
             </ul>
         </div>
         <!--导航 -->
@@ -70,7 +70,7 @@
 
 
             <!--登陆 -->
-            <div class="login" style="display:none;">
+            <div class="login" <#if page_tab == 'user'> style="display:none;" </#if>>
                 <a href="#" class="reg">登录</a>
                 <a href="#">注册</a>
             </div>
