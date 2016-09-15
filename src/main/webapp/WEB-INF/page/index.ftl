@@ -1,5 +1,5 @@
 <#include "./common/layout.ftl">
-<@html page_title="首页 - ${siteTitle!}">
+<@html page_title="首页 - ${siteTitle!}" page_tab="index">
 
 <!--幻灯 -->
 <div class="slide wrap">
@@ -60,16 +60,19 @@ $(function(){
 
 
 <!--分页 -->
+
 <div class="pages">
-  <a href="#" class="pr"><img src="/static/image/left_jt.png" /></a>
-  <a href="#">1</a>
-  <a href="#" class="now">2</a>
-  <a href="#">3</a>
-  <a href="#">4</a>
-  <a href="#">5</a>
-  <a href="#">6</a>
-  <span>...</span>
-  <a href="#" class="pr"><img src="/static/image/right_jt.png" /></a>
+	<#include "./components/paginate.ftl"/>
+	<@paginate currentPage=page.getPageNumber() totalPage=page.getTotalPage() actionUrl="/" />
+  <#--<a href="#" class="pr"><img src="/static/image/left_jt.png" /></a>-->
+  <#--<a href="#">1</a>-->
+  <#--<a href="#" class="now">2</a>-->
+  <#--<a href="#">3</a>-->
+  <#--<a href="#">4</a>-->
+  <#--<a href="#">5</a>-->
+  <#--<a href="#">6</a>-->
+  <#--<span>...</span>-->
+  <#--<a href="#" class="pr"><img src="/static/image/right_jt.png" /></a>-->
 </div>
 <!--分页 -->
 

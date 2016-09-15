@@ -17,6 +17,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.safety.Whitelist;
 
 import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
 import java.net.URLEncoder;
 
 /**
@@ -35,8 +36,8 @@ public class UserController extends BaseController {
         if (StrUtil.isBlank(nickname)) {
             renderText(Constants.OP_ERROR_MESSAGE);
         } else {
-            User currentUser = User.me.findByNickname(nickname);
-            if(currentUser != null) {
+            User currentUser = User.me.findByNickname(URLDecoder.decode(nickname, "utf-8"));
+            if (currentUser != null) {
                 Long collectCount = Collect.me.countByUid(currentUser.getInt("id"));
                 currentUser.put("collectCount", collectCount);
 
@@ -45,6 +46,10 @@ public class UserController extends BaseController {
                 setAttr("topicPage", topicPage);
                 setAttr("replyPage", replyPage);
                 setAttr("pageTitle", currentUser.getStr("nickname") + " 个人主页");
+
+                UserExtend userExtend = UserExtend.me.findByserId(currentUser.get("id"));
+                setAttr("userExtend", userExtend);
+
             } else {
                 setAttr("pageTitle", "用户未找到");
             }

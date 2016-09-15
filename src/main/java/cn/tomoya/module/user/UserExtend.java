@@ -16,20 +16,20 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * Created by tomoya.
+ * Created by Tempestlxc.
  * Copyright (c) 2016, All Rights Reserved.
- * http://tomoya.cn
+ * http://lzone.cn
  */
-public class User extends BaseModel<User> {
-    public static final User me = new User();
+public class UserExtend extends BaseModel<UserExtend> {
+    public static final UserExtend me = new UserExtend();
 
     /**
-     * 根据Github_access_token查询用户信息
-     * @param thirdId
+     * 根据userId查询用户扩展信息
+     * @param userId
      * @return
      */
-    public User findByThirdId(String thirdId) {
-        return super.findFirst("select * from pybbs_user where third_id = ?", thirdId);
+    public UserExtend findByserId(Integer userId) {
+        return super.findFirst("select * from pybbs_user_extend where user_id = ?", userId);
     }
 
     /**
@@ -37,9 +37,9 @@ public class User extends BaseModel<User> {
      * @param accessToken
      * @return
      */
-    public User findByAccessToken(String accessToken) {
+    public UserExtend findByAccessToken(String accessToken) {
         Cache cache = Redis.use();
-        User user = cache.get(CacheEnum.useraccesstoken.name() + accessToken);
+        UserExtend user = cache.get(CacheEnum.useraccesstoken.name() + accessToken);
         if(user == null) {
             user = findFirst(
                     "select * from pybbs_user where access_token = ? and expire_time > ?",
@@ -55,12 +55,12 @@ public class User extends BaseModel<User> {
      * @param nickname
      * @return
      */
-    public User findByNickname(String nickname) throws UnsupportedEncodingException {
+    public UserExtend findByNickname(String nickname) throws UnsupportedEncodingException {
         if(StrUtil.isBlank(nickname)) {
             return null;
         }
         Cache cache = Redis.use();
-        User user = cache.get(CacheEnum.usernickname.name() + URLEncoder.encode(nickname, "utf-8"));
+        UserExtend user = cache.get(CacheEnum.usernickname.name() + URLEncoder.encode(nickname, "utf-8"));
         if(user == null) {
             user = findFirst(
                     "select * from pybbs_user where nickname = ?",
@@ -77,7 +77,7 @@ public class User extends BaseModel<User> {
      * @param pageSize
      * @return
      */
-    public Page<User> page(Integer pageNumber, Integer pageSize) {
+    public Page<UserExtend> page(Integer pageNumber, Integer pageSize) {
         return super.paginate(pageNumber, pageSize, "select * ", "from pybbs_user order by in_time desc");
     }
 
@@ -113,7 +113,7 @@ public class User extends BaseModel<User> {
      * @param id
      * @return
      */
-    public List<User> findByPermissionId(Integer id) {
+    public List<UserExtend> findByPermissionId(Integer id) {
         return super.find("select u.* from pybbs_user u, pybbs_user_role ur, pybbs_role r, pybbs_role_permission rp, " +
                 "pybbs_permission p where u.id = ur.uid and ur.rid = r.id and r.id = rp.rid and rp.pid = p.id and p.id = ?",
                 id);
@@ -123,7 +123,7 @@ public class User extends BaseModel<User> {
      * 积分榜用户
      * @return
      */
-    public List<User> scores(Integer limit) {
+    public List<UserExtend> scores(Integer limit) {
         return super.find(
                 "select user.*, role.description from pybbs_user user, pybbs_role role, pybbs_user_role ur " +
                         "where user.id = ur.uid and ur.rid = role.id order by score desc, in_time desc limit ?",
