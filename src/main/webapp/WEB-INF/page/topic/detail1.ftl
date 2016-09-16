@@ -123,10 +123,10 @@
         </#if>
     </div>
     <div class="col-md-3 hidden-sm hidden-xs">
-        <#--<#include "../components/authorinfo.ftl"/>-->
-        <#--<@info/>-->
-        <#--<#include "../components/othertopics.ftl"/>-->
-        <#--<@othertopics/>-->
+        <#include "../components/authorinfo.ftl"/>
+        <@info/>
+        <#include "../components/othertopics.ftl"/>
+        <@othertopics/>
     </div>
 </div>
 <link rel="stylesheet" href="/static/css/jquery.atwho.min.css"/>
