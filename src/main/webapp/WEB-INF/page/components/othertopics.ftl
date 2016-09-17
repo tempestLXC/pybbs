@@ -1,13 +1,11 @@
 <#macro othertopics>
-<div class="panel panel-default">
-    <div class="panel-heading">作者其他话题</div>
-    <div class="panel-body">
-        <#list otherTopics as topic>
-            <p><a href="/t/${topic.id!}">${topic.title!}</a></p>
-            <#if topic_has_next>
-                <div class="divide pad-bot-10"></div>
-            </#if>
-        </#list>
+<p class="author_last_title">最近发布</p>
+    <#list otherTopics as topic>
+    <div class="author_last_public">
+        <div class="last_public_figure">
+            <img class="last_public_image" src="${topic.cover_uri!}">
+            <div class="last_public_name"><a href="/t/${topic.id!}">${topic.title!}</a></div>
+        </div>
     </div>
-</div>
+    </#list>
 </#macro>

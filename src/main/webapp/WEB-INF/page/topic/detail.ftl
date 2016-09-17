@@ -125,58 +125,10 @@
     </div>
     <!--右部内容区域-->
     <div class="content_detail_right">
-        <div class="author_information">
-            <div class="author_header_box">
-                <img src="${authorinfo.avatar!}" title="${authorinfo.nickname!}" class="author_header"/>
-                <div class="author_name_box">
-                    <div class="author_name"><a href="/user/${topic.author!}">${topic.author!}</a></div>
-                    <div class="comment_button">
-                        <span>＋</span>关注
-                    </div>
-                </div>
-            </div>
-            <p class="author_intorduce">
-                ${exAuthorinfo.introduce_title}
-            </p>
-
-        </div>
-        <p class="author_last_title">最近发布</p>
-        <div class="author_last_public">
-            <div class="last_public_figure">
-                <img class="last_public_image" src="/static/image/add/05.jpg">
-                <div class="last_public_name">2016_工作整理</div>
-            </div>
-        </div>
-        <div class="author_last_public">
-            <div class="last_public_figure">
-                <div class="last_public_image"></div>
-                <div class="last_public_name">2016_工作整理</div>
-            </div>
-        </div>
-        <div class="author_last_public">
-            <div class="last_public_figure">
-                <div class="last_public_image"></div>
-                <div class="last_public_name">2016_工作整理</div>
-            </div>
-        </div>
-        <div class="author_last_public">
-            <div class="last_public_figure">
-                <div class="last_public_image"></div>
-                <div class="last_public_name">2016_工作整理</div>
-            </div>
-        </div>
-        <div class="author_last_public">
-            <div class="last_public_figure">
-                <div class="last_public_image"></div>
-                <div class="last_public_name">2016_工作整理</div>
-            </div>
-        </div>
-        <div class="author_last_public">
-            <div class="last_public_figure">
-                <div class="last_public_image"></div>
-                <div class="last_public_name">2016_工作整理</div>
-            </div>
-        </div>
+        <#include "../components/authorinfo.ftl"/>
+        <@info/>
+        <#include "../components/othertopics.ftl"/>
+        <@othertopics/>
     </div>
 </div>
 
