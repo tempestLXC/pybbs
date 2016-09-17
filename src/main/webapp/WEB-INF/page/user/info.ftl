@@ -6,7 +6,7 @@
     <div class="personal_introduce_content">
         <img class="personal_header" src="${currentUser.avatar!}">
         <div class="introduct_text">
-            <p class="introduce_name">limignang</p>
+            <p class="introduce_name">${currentUser.nickname!}</p>
             <p class="introduce_title"> </p>
             <#--<p class="introduce_title">GUI设计师</p>-->
             <p class="introduce_detail"> </p>
