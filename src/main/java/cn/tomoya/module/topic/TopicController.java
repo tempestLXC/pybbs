@@ -10,6 +10,7 @@ import cn.tomoya.module.collect.Collect;
 import cn.tomoya.module.reply.Reply;
 import cn.tomoya.module.section.Section;
 import cn.tomoya.module.user.User;
+import cn.tomoya.module.user.UserExtend;
 import cn.tomoya.utils.SolrUtil;
 import cn.tomoya.utils.StrUtil;
 import cn.tomoya.utils.ext.route.ControllerBind;
@@ -78,6 +79,12 @@ public class TopicController extends BaseController {
             setAttr("topicAppends", topicAppends);
             setAttr("section", section);
             setAttr("authorinfo", authorinfo);
+
+            if (authorinfo != null) {
+                UserExtend userExtend = UserExtend.me.findByserId(authorinfo.get("id"));
+                setAttr("exAuthorinfo", userExtend);
+            }
+
             setAttr("otherTopics", otherTopics);
             setAttr("page", page);
             setAttr("collectCount", collectCount);

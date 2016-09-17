@@ -89,32 +89,11 @@
         </div>
 
 
-        <!--发表评论区域-->
-        <#--<div class="comment_public_area">-->
-            <#--<div class="panel-body">-->
-                <#--<form action="/r/save" method="post" id="replyForm">-->
-                    <#--<input type="hidden" value="${topic.id}" name="tid"/>-->
-
-                    <#--<div class="form-group">-->
-                    <#--<textarea name="content" id="content" rows="5" class="form-control"></textarea>-->
-                    <#--</div>-->
-                    <#--<div class="comment_oporate">-->
-                    <#--&lt;#&ndash;<div class="emoj_image pointer"></div>&ndash;&gt;-->
-                    <#--&lt;#&ndash;<a href="">&ndash;&gt;-->
-                    <#--&lt;#&ndash;<div class="upload_production"></div>&ndash;&gt;-->
-                    <#--&lt;#&ndash;<span class="upload_text">上传作品</span>&ndash;&gt;-->
-                    <#--&lt;#&ndash;</a>&ndash;&gt;-->
-                    <#--&lt;#&ndash;<span class="image_name">tupian.png</span>&ndash;&gt;-->
-                        <#--<div onclick="replySubmit()" class="public_button pointer">发表</div>-->
-                    <#--</div>-->
-                <#--</form>-->
-            <#--</div>-->
-        <#--</div>-->
         <#if userinfo??>
             <div class="panel panel-default">
                 <div class="panel-heading">
                     添加一条新回复
-                    <a href="javascript:;" id="goTop" class="pull-right">回到顶部</a>
+                    <#--<a href="javascript:;" id="goTop" class="pull-right">回到顶部</a>-->
                 </div>
                 <div class="panel-body">
                     <form action="/r/save" method="post" id="replyForm">
@@ -157,7 +136,7 @@
                 </div>
             </div>
             <p class="author_intorduce">
-                原腾讯ecd视觉设计师：京东高级视觉设计师
+                ${exAuthorinfo.introduce_title}
             </p>
 
         </div>

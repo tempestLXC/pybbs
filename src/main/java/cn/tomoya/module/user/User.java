@@ -130,5 +130,4 @@ public class User extends BaseModel<User> {
                 limit
         );
     }
-
 }
