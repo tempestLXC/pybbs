@@ -43,8 +43,10 @@ $(function(){
      
 	 <!--标题 -->
 	 <div class="nav_title">
-	    <h3>首页推荐<span>这不仅仅是头条，更是一种最求！</span></h3> 
-		<em><a href="upload_file.html">发表作品</a></em>
+	    <h3>首页推荐<span>这不仅仅是头条，更是一种最求！</span></h3>
+		 <#if userinfo??>
+			<em><a href="/t/create">发表作品</a></em>
+		 </#if>
 	 </div>
 	 <!--标题 -->
 
