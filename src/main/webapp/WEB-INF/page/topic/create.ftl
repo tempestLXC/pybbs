@@ -37,11 +37,11 @@
                         </#list>
                     </select>
                     <select name="" id="">
-                        <option value="">好文转载（必选项）</option>
-                        <option value="">自译外文</option>
-                        <option value="">选择分类2</option>
+                        <#list subsections as subsection>
+                            <option value="${subsection.id}">${subsection.title!}</option>
+                        </#list>
                     </select>
-                    <#--<input type="text" class="author_fil" placeholder="请填写作者"/>-->
+                    <input type="text" class="author_fil" placeholder="请填写作者"/>
                 </div>
                 <p class="article_input_title">
                     <span class="input_title_left">文章简介：</span>

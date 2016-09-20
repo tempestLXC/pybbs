@@ -9,6 +9,7 @@ import cn.tomoya.interceptor.UserStatusInterceptor;
 import cn.tomoya.module.collect.Collect;
 import cn.tomoya.module.reply.Reply;
 import cn.tomoya.module.section.Section;
+import cn.tomoya.module.subsection.Subsection;
 import cn.tomoya.module.user.User;
 import cn.tomoya.module.user.UserExtend;
 import cn.tomoya.utils.SolrUtil;
@@ -103,6 +104,7 @@ public class TopicController extends BaseController {
         String method = getRequest().getMethod();
         if (method.equals("GET")) {
             setAttr("sections", Section.me.findByShowStatus(true));
+            setAttr("subsections", Subsection.me.findByShowStatusByType(2, true));
             render("topic/create.ftl");
         } else if (method.equals("POST")) {
             Date now = new Date();

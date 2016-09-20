@@ -16,6 +16,7 @@ public class Constants {
     public enum CacheEnum {
         section,
         sections,
+        subsections,
         topic,
         topicappends,
         usernickname,
